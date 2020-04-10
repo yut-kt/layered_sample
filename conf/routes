@@ -1,0 +1,10 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+GET         /posts                         ui.controller.PostController.index
+POST        /posts/create                  ui.controller.PostController.create
+
+GET         /posts/:postId/comments        ui.controller.CommentController.show(postId: String)
+POST        /posts/:postId/comments/create ui.controller.CommentController.create(postId: String)
